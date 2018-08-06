@@ -10,7 +10,6 @@ function getHTML (options, callback) {
         // callback is invoked when data chunck is received
         response.on('data', function (data) {
             html += data;
-            // console.log(html);
 
         });
         response.on('end', function() {
@@ -27,4 +26,7 @@ function getHTML (options, callback) {
     host: 'sytantris.github.io',
     path: '/http-examples/step4.html'
   };
-  getHTML(requestOptions, printHTML);
+
+  module.exports = {
+    getHTML: getHTML
+  };
