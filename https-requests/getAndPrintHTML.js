@@ -15,7 +15,7 @@ function getAndPrintHTML () {
 
         // callback is invoked when data chunck is received
         response.on('data', function (data) {
-            buffer = buffer + data;
+            buffer += buffer + data;
             console.log(buffer);
         });
     });
